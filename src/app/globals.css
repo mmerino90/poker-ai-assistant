@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b3d2e; /* poker felt green */
+  --surface: #0f5740;
+  --surface-2: #0a2c22;
+  --foreground: #f3f4f6;
+  --muted: #cbd5e1;
+  --accent: #f59e0b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  /* avoid iOS auto-zoom on input focus by keeping base font >= 16px */
+  font-size: 16px;
+}
+
+body {
+  background:
+    radial-gradient(120% 80% at 50% -10%, #14694e 0%, var(--background) 55%, #06251c 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove number-input spinners for a cleaner chip-entry feel */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

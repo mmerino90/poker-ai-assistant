@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { type Card, cardId } from "@/lib/cards";
 import { recommend, type Decision } from "@/lib/decision";
@@ -669,6 +670,12 @@ function SetupScreen({
       <header className="mb-5 text-center">
         <h1 className="text-2xl font-bold tracking-tight">♠ Poker Assistant</h1>
         <p className="mt-1 text-sm text-muted">Set up your table</p>
+        <Link
+          href="/scanner"
+          className="mt-2 inline-block rounded-lg bg-white/10 px-3 py-1.5 text-xs font-semibold hover:bg-white/15"
+        >
+          📷 Live screen scanner (beta) →
+        </Link>
       </header>
 
       <section className="mb-4 rounded-2xl bg-surface/70 p-4 ring-1 ring-white/10">
